@@ -1,9 +1,10 @@
 import pygame
 import sys
+from constants import *
 
 def main():
     pygame.init()
-    screen = pygame.display.set_mode((800, 600))
+    screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
     pygame.display.set_caption('Морской Бой')
     
     clock = pygame.time.Clock()
@@ -14,7 +15,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
         
-        screen.fill((0, 0, 255))  # Синий фон
+        screen.fill(BLUE)
         pygame.display.flip()
         clock.tick(60)
     
